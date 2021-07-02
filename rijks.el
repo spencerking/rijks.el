@@ -38,6 +38,8 @@
   output-name)
 
 (defun rijks-display-random-image ()
+  "Display a random work of art from the Rijks Museum"
+  (interactive)
   (rijks-request-image)
   (setq img-url (rijks-get-img-url))
   (setq file-path (rijks-download-image img-url))
